@@ -1,3 +1,9 @@
+# revision 19388
+# category Package
+# catalog-ctan /macros/latex/contrib/figbib
+# catalog-date 2006-10-19 22:42:58 +0200
+# catalog-license lppl
+# catalog-version undef
 Name:		texlive-figbib
 Version:	20061019
 Release:	1
@@ -50,6 +56,7 @@ objects or in a separate part at the end of your document.
 %doc %{_texmfdistdir}/doc/latex/figbib/figbib_sample.pdf
 %doc %{_texmfdistdir}/doc/latex/figbib/figbib_sample.tex
 %doc %{_texmfdistdir}/doc/latex/figbib/smiley.eps
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -60,3 +67,5 @@ objects or in a separate part at the end of your document.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar bibtex tex doc %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
