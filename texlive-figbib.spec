@@ -17,8 +17,6 @@ BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
 Requires(post):	texlive-kpathsea
-Conflicts:	texlive-texmf <= 20110705-3
-Conflicts:	texlive-doc <= 20110705-3
 
 %description
 FigBib lets you organize your figures in BibTeX databases. Some
@@ -29,20 +27,12 @@ more/other information than the figure captions; - Control with
 one switch where to output the figures, either as usual float
 objects or in a separate part at the end of your document.
 
-%pre
-    %_texmf_mktexlsr_pre
-
 %post
-    %_texmf_mktexlsr_post
-
-%preun
-    if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_pre
-    fi
+    %{_sbindir}/texlive.post
 
 %postun
     if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_post
+	%{_sbindir}/texlive.post
     fi
 
 #-----------------------------------------------------------------------
@@ -57,7 +47,6 @@ objects or in a separate part at the end of your document.
 %doc %{_texmfdistdir}/doc/latex/figbib/figbib_sample.pdf
 %doc %{_texmfdistdir}/doc/latex/figbib/figbib_sample.tex
 %doc %{_texmfdistdir}/doc/latex/figbib/smiley.eps
-%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -68,5 +57,3 @@ objects or in a separate part at the end of your document.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar bibtex tex doc %{buildroot}%{_texmfdistdir}
-mkdir -p %{buildroot}%{_tlpkgobjdir}
-cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
