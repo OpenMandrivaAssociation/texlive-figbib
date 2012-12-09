@@ -57,3 +57,17 @@ objects or in a separate part at the end of your document.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar bibtex tex doc %{buildroot}%{_texmfdistdir}
+
+
+%changelog
+* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 20061019-2
++ Revision: 751837
+- Rebuild to reduce used resources
+
+* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 20061019-1
++ Revision: 718434
+- texlive-figbib
+- texlive-figbib
+- texlive-figbib
+- texlive-figbib
+
