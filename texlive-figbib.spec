@@ -6,7 +6,7 @@
 # catalog-version undef
 Name:		texlive-figbib
 Version:	20061019
-Release:	3
+Release:	4
 Summary:	Organize figure databases with BibTeX
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/figbib
