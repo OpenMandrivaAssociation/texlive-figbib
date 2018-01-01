@@ -1,9 +1,3 @@
-# revision 19388
-# category Package
-# catalog-ctan /macros/latex/contrib/figbib
-# catalog-date 2006-10-19 22:42:58 +0200
-# catalog-license lppl
-# catalog-version undef
 Name:		texlive-figbib
 Version:	20170414
 Release:	1
@@ -37,16 +31,9 @@ objects or in a separate part at the end of your document.
 
 #-----------------------------------------------------------------------
 %files
-%{_texmfdistdir}/bibtex/bst/figbib/figbib.bst
-%{_texmfdistdir}/bibtex/bst/figbib/figbib1.bst
-%{_texmfdistdir}/tex/latex/figbib/figbib.sty
-%doc %{_texmfdistdir}/doc/latex/figbib/README
-%doc %{_texmfdistdir}/doc/latex/figbib/figbib_doc.pdf
-%doc %{_texmfdistdir}/doc/latex/figbib/figbib_doc.tex
-%doc %{_texmfdistdir}/doc/latex/figbib/figbib_sample.bib
-%doc %{_texmfdistdir}/doc/latex/figbib/figbib_sample.pdf
-%doc %{_texmfdistdir}/doc/latex/figbib/figbib_sample.tex
-%doc %{_texmfdistdir}/doc/latex/figbib/smiley.eps
+%{_texmfdistdir}/bibtex/bst/figbib
+%{_texmfdistdir}/tex/latex/figbib
+%doc %{_texmfdistdir}/doc/latex/figbib
 
 #-----------------------------------------------------------------------
 %prep
@@ -57,17 +44,3 @@ objects or in a separate part at the end of your document.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar bibtex tex doc %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 20061019-2
-+ Revision: 751837
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 20061019-1
-+ Revision: 718434
-- texlive-figbib
-- texlive-figbib
-- texlive-figbib
-- texlive-figbib
-
