@@ -1,6 +1,6 @@
 Name:		texlive-figbib
 Version:	20180303
-Release:	1
+Release:	2
 Summary:	Organize figure databases with BibTeX
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/figbib
