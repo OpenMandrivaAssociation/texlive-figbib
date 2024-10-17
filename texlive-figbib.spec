@@ -3,7 +3,7 @@ Version:	19388
 Release:	2
 Summary:	Organize figure databases with BibTeX
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/figbib
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/figbib
 License:	LPPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/figbib.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/figbib.doc.r%{version}.tar.xz
